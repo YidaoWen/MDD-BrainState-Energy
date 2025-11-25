@@ -104,8 +104,8 @@ if __name__ == "__main__":
     # Paths (Modify as needed)
     ROOT_DIR = '../../ukb_raw_data/'
     # Directory where outputs from step 1 (extract_brain_states.py) are stored
-    DATA_SOURCE_DIR = '../results/state_maps_results/' 
-    OUTPUT_DIR = '../results/states_metrics/'
+    DATA_SOURCE_DIR = '../results/state_maps_results_NoLIM/' 
+    OUTPUT_DIR = '../results/states_metrics_NoLIM/'
     
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
