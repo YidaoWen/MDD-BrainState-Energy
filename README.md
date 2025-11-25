@@ -44,7 +44,7 @@ This study relies on several open-source libraries. We gratefully acknowledge th
 * **Preprocessing:** [UKB-connectomics](https://github.com/sina-mansour/UKB-connectomics), FSL, Freesurfer, MRtrix3.
 * **Brain States:** [control_costs](https://github.com/NeuroenergeticsLab/control_costs), [energy_landscape](https://github.com/singlesp/energy_landscape).
 * **Control Energy:** [nctpy](https://github.com/LindenParkesLab/nctpy).
-* **Statistical Analysis:** * PLS Correlation: [myPLS](https://github.com/danizoeller/myPLS) (modified for spin tests).
+* **Statistical Analysis:** PLS Correlation: [myPLS](https://github.com/danizoeller/myPLS) (modified for spin tests).
     * PLS Regression: [NSPN_WhitakerVertes_PNAS2016](https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016).
     * Spin Tests: [rotate_parcellation](https://github.com/frantisekvasa/rotate_parcellation), [ENIGMA Toolbox](https://github.com/MICA-MNI/ENIGMA).
     * Meta-analysis: [NiMARE](https://github.com/neurostuff/NiMARE).
