@@ -20,40 +20,40 @@ These findings shed light on the energetic mechanism underlying brain state dysr
 
 ---
 
-## System Requirements & Dependencies
+## Repository Structure
 
-The analysis was performed using **MATLAB** and **Python**. To reproduce the results, the following dependencies are required:
+The code is organized into three main modules corresponding to the analytical steps in the study:
 
-### MATLAB
-* **MATLAB Version:** (e.g., R2021b or later)
-* **Toolboxes:** * SPM12
-    * DPABI / DPARSF
-    * Brain Connectivity Toolbox (BCT)
-    * (Please list any other specific MATLAB toolboxes used here)
+### 1. [`Data_Preprocessing/`](Data_Preprocessing/)
+* **Purpose:** Preprocessing of fMRI/dMRI data and construction of the Brainnetome Atlas (BNA) based networks.
+* **Key Scripts:** Pipeline adapted from UKB-connectomics for unified cortical-subcortical parcellation.
 
-### Python
-* **Python Version:** (e.g., 3.8+)
-* **Libraries:**
-    * `numpy`
-    * `pandas`
-    * `nibabel`
-    * `scipy`
-    * (Please list any other specific Python libraries used here)
+### 2. [`Brain_State_Analysis/`](Brain_State_Analysis/)
+* **Purpose:** Extraction of recurrent brain states and calculation of temporal dynamic metrics.
+* **Key Metrics:** Fractional Occupancy (FO), Dwell Time (DT), Appearance Rate (AR), Transition Probability (TP).
+* **Includes:** Validation scripts for "NoLIM" (excluding Limbic network) conditions.
 
+### 3. [`Energy_Analysis/`](Energy_Analysis/)
+* **Purpose:** Quantification of control energy using Network Control Theory (NCT).
+* **Key Metrics:** Global Transition Energy, Regional Energy Regulation Capacity (rERC).
 ---
 
-## Usage
+## External Resources & Dependencies
 
-This repository is organized to facilitate the reproduction of the analysis pipeline described in the manuscript.
-
-1.  **Preprocessing:** Scripts located in the `preprocessing` folder handle the initial fMRI data processing.
-2.  **Energy Analysis:** The core analysis based on network control theory is located in the `analysis` folder.
-3.  **Visualization:** Scripts used to generate the figures in the main text are provided in the `plotting` folder.
-
----
+This study relies on several open-source libraries. We gratefully acknowledge the authors of the following tools:
+* **Preprocessing:** [UKB-connectomics](https://github.com/sina-mansour/UKB-connectomics), FSL, Freesurfer, MRtrix3.
+* **Brain States:** [control_costs](https://github.com/NeuroenergeticsLab/control_costs), [energy_landscape](https://github.com/singlesp/energy_landscape).
+* **Control Energy:** [nctpy](https://github.com/LindenParkesLab/nctpy).
+* **Statistical Analysis:** * PLS Correlation: [myPLS](https://github.com/danizoeller/myPLS) (modified for spin tests).
+    * PLS Regression: [NSPN_WhitakerVertes_PNAS2016](https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016).
+    * Spin Tests: [rotate_parcellation](https://github.com/frantisekvasa/rotate_parcellation), [ENIGMA Toolbox](https://github.com/MICA-MNI/ENIGMA).
+    * Meta-analysis: [NiMARE](https://github.com/neurostuff/NiMARE).
+* **Gene & Cell Analysis:** [Metascape](https://metascape.org), [hansen_genescognition](https://github.com/netneurolab/hansen_genescognition).
+* **Null Models:** [Brain Connectivity Toolbox](https://sites.google.com/site/bctnet), [Geometry-preserving nulls](https://www.brainnetworkslab.com/coderesources).
+* **Visualization:** [Neuromaps](https://github.com/netneurolab/neuromaps).
 
 ## Citation
 
-If you use this code in your research, please cite our paper:
+If you use this code or the associated findings, please cite:
 
 > Liu, Q., Xiong, H., et al. (2025). Energy inefficiency underpinning brain state dysregulation in individuals with major depressive disorder. *Nature Mental Health*. (In Press)
